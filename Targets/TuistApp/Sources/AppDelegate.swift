@@ -12,11 +12,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .white
+        let storyboard = UIStoryboard(name: "HelloTuistViewController", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "HelloTuistViewController")
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
-        TuistAppKit.hello()
+//        TuistAppKit.hello()
     
 
         return true
